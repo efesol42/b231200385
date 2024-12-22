@@ -1,0 +1,13 @@
+[Unit]
+Description=File Watcher Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/kali/bsm/file_watcher.py
+WorkingDirectory=/home/kali/bsm
+Restart=always
+User=kali
+Group=kali
+
+[Install]
+WantedBy=multi-user.target
